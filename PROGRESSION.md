@@ -38,7 +38,7 @@ This document tracks development tasks organized by phase. Each task includes a 
   - Priority: []
   - Notes: Exclude __pycache__, venv/, build artifacts, etc.
 
-### Data Structure
+### Data Structure 
 
 - [ ] **Task 1.5:** Design YAML schema for posts
   - Priority: []
