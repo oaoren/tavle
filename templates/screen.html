@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Skjermvisning - Tavla{% endblock %}
+
+{% block extra_head %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    header, nav, footer {
+        display: none;
+    }
+    main {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    .post-card {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    .post-title {
+        font-size: 2.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="screen-posts">
+    {% for post in all_posts %}
+        {% include "post_card.html" %}
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Auto-refresh every 5 minutes
+    setTimeout(function() {
+        location.reload();
+    }, 300000);
+    
+    // Rotate through posts or scroll automatically
+    // Simple implementation: just refresh
+</script>
+{% endblock %}
+

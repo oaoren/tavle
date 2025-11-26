@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="posts-container">
+    {% if posts_by_type.events %}
+    <section id="events" class="post-section">
+        <div class="posts-grid">
+            {% for post in posts_by_type.events %}
+                {% include "post_card.html" %}
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if posts_by_type.info %}
+    <section id="info" class="post-section">
+        <h2>Informasjon</h2>
+        <div class="posts-grid">
+            {% for post in posts_by_type.info %}
+                {% include "post_card.html" %}
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if posts_by_type.ads %}
+    <section id="ads" class="post-section">
+        <h2>Annonser</h2>
+        <div class="posts-grid">
+            {% for post in posts_by_type.ads %}
+                {% include "post_card.html" %}
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
+
+    {% if not posts_by_type.events and not posts_by_type.info and not posts_by_type.ads %}
+    <div class="no-posts">
+        <p>Ingen innlegg å vise for øyeblikket.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+

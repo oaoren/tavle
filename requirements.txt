@@ -1,0 +1,12 @@
+# Python dependencies for Tavla
+
+# YAML parsing
+PyYAML>=6.0
+
+# Template engine
+Jinja2>=3.1.0
+
+# Development (optional)
+# black>=23.0.0
+# pytest>=7.0.0
+
